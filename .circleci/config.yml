@@ -2,10 +2,11 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: 'hub.docker.prod.walmart.com/circleci/android:api-30-alpha'
+      - image: 'hub.docker.prod.walmart.com/cimg/android:2021.12.2'
     steps:
       - checkout
       # - run: node --version
       - run:
           name: Download Dependencies
-          command: ./gradlew androidDependencies
+          # command: ./gradlew androidDependencies
+          command: ./gradlew clean
