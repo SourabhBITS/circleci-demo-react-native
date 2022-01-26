@@ -2,14 +2,9 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: 'hub.docker.prod.walmart.com/circleci/android:api-29-node'
+      - image: 'hub.docker.prod.walmart.com/cimg/android:2021.12.2'
     steps:
       - checkout
-          path: ~/demo-react-native
-
-      - attach_workspace:
-          at: ~/demo-react-native
-
       - run:
           name: Download Dependencies
-          command: ./gradlew clean
+          command: ./android/gradlew clean
