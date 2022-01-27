@@ -10,9 +10,9 @@ buildscript {
     repositories {
         // google()
         // jcenter()
-        // maven { url "https://repository.walmart.com/content/repositories/jcenter/" }
-        // maven {url 'https://repository.walmart.com/content/repositories/dl_google'}
-        // maven {url 'https://repository.walmart.com/content/repositories/dl_google/dl/android/maven2'}
+        maven { url "https://repository.walmart.com/content/repositories/jcenter/" }
+        maven {url 'https://repository.walmart.com/content/repositories/dl_google'}
+        maven {url 'https://repository.walmart.com/content/repositories/dl_google/dl/android/maven2'}
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.3")
@@ -32,9 +32,9 @@ allprojects {
             // Android JSC is installed from npm
             url("$rootDir/../node_modules/jsc-android/dist")
         }
-        // maven { url "https://repository.walmart.com/content/repositories/jcenter/" }
-        // maven {url 'https://repository.walmart.com/content/repositories/dl_google'}
-        // maven {url 'https://repository.walmart.com/content/repositories/dl_google/dl/android/maven2'}
+        maven { url "https://repository.walmart.com/content/repositories/jcenter/" }
+        maven {url 'https://repository.walmart.com/content/repositories/dl_google'}
+        maven {url 'https://repository.walmart.com/content/repositories/dl_google/dl/android/maven2'}
 
         // google()
         // jcenter()
