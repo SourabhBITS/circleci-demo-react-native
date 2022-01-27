@@ -8,9 +8,11 @@ buildscript {
         targetSdkVersion = 29
     }
     repositories {
-        google()
+        // google()
         // jcenter()
         // maven { url "https://repository.walmart.com/content/repositories/jcenter/" }
+        // maven {url 'https://repository.walmart.com/content/repositories/dl_google'}
+        // maven {url 'https://repository.walmart.com/content/repositories/dl_google/dl/android/maven2'}
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.3")
@@ -31,8 +33,10 @@ allprojects {
             url("$rootDir/../node_modules/jsc-android/dist")
         }
         // maven { url "https://repository.walmart.com/content/repositories/jcenter/" }
+        // maven {url 'https://repository.walmart.com/content/repositories/dl_google'}
+        // maven {url 'https://repository.walmart.com/content/repositories/dl_google/dl/android/maven2'}
 
-        google()
+        // google()
         // jcenter()
         // maven { url 'https://www.jitpack.io' }
     }
