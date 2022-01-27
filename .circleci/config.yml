@@ -7,5 +7,5 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Download Dependencies
-          command: ./android/gradlew clean
+          name: Check node version
+          command: node -v
