@@ -1,3 +1,4 @@
-source "https://rubygems.org"
+# source "https://rubygems.org"
+source "https://repository.walmart.com/content/repositories/rubygems/"
 
 gem "fastlane"
