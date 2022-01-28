@@ -1,6 +1,5 @@
 version: 2.1
 jobs:
-
   node:
     working_directory: ~/demo-react-native
     docker:
@@ -55,7 +54,6 @@ jobs:
       FASTLANE_LANE: test
 
     steps:
-      - run: xcodebuild -version
       - checkout
       - restore_cache:
           key: yarn-v1-{{ checksum "yarn.lock" }}-{{ arch }}
@@ -63,6 +61,7 @@ jobs:
       - restore_cache:
           key: node-v1-{{ checksum "package.json" }}-{{ arch }}
 
+      - run: node -v
       - run: yarn install
 
       - save_cache:
@@ -156,4 +155,3 @@ workflows:
       - macos-build-and-test:
           requires:
             - node
-      # - runner
