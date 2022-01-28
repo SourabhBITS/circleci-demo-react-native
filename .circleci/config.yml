@@ -1,5 +1,6 @@
 version: 2.1
 jobs:
+
   node:
     working_directory: ~/demo-react-native
     docker:
@@ -44,20 +45,13 @@ jobs:
 
       - store_artifacts:
           path: test-results
-  
-  runner:
-    machine: true
-    resource_class: ns_circle-poc-testing/MAC-LAB-MINI23
-    steps:
-      - run: echo "Hi I'm on Runners!"
 
   macos-build-and-test:
-    # working_directory: ~/demo-react-native
+    working_directory: ~/demo-react-native
     # macos:
     #   xcode: 12.5.1
-    # machine: true
-    resource_class: test-namespace/mac-runner1
-      # xcode: 11.3.0
+    machine: true
+    resource_class: ns_circle-poc-testing/MAC-LAB-MINI23
     # environment:
     #   FL_OUTPUT_DIR: output
     #   FASTLANE_LANE: test
@@ -157,11 +151,11 @@ jobs:
 workflows:
   node-android-ios:
     jobs:
-      # - node
+      - node
       # - android-build-and-test:
       #     requires:
       #       - node
-      # - macos-build-and-test:
-          # requires:
-          #   - node
-      - runner
+      - macos-build-and-test:
+          requires:
+            - node
+      # - runner
