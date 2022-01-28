@@ -55,7 +55,7 @@ jobs:
     # working_directory: ~/demo-react-native
     # macos:
     #   xcode: 12.5.1
-    machine: true
+    # machine: true
     resource_class: test-namespace/mac-runner1
       # xcode: 11.3.0
     # environment:
