@@ -44,6 +44,13 @@ jobs:
 
       - store_artifacts:
           path: test-results
+  
+  runner:
+    machine: true
+    resource_class: test-namespace/mac-runner1
+    steps:
+      - run: echo "Hi I'm on Runners!"
+
   macos-build-and-test:
     # working_directory: ~/demo-react-native
     # macos:
@@ -150,10 +157,11 @@ jobs:
 workflows:
   node-android-ios:
     jobs:
-      - node
-      - android-build-and-test:
-          requires:
-            - node
-      - macos-build-and-test:
-          requires:
-            - node
+      # - node
+      # - android-build-and-test:
+      #     requires:
+      #       - node
+      # - macos-build-and-test:
+          # requires:
+          #   - node
+      - runner
