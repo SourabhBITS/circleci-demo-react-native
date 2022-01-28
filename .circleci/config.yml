@@ -46,7 +46,7 @@ jobs:
           path: test-results
   
   runner:
-    machine: true
+    # machine: true
     resource_class: test-namespace/mac-runner1
     steps:
       - run: echo "Hi I'm on Runners!"
