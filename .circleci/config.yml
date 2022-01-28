@@ -46,8 +46,8 @@ jobs:
           path: test-results
   
   runner:
-    # machine: true
-    resource_class: test-namespace/mac-runner1
+    machine: true
+    resource_class: ns_circle-poc-testing/MAC-LAB-MINI23
     steps:
       - run: echo "Hi I'm on Runners!"
 
