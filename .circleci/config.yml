@@ -46,8 +46,10 @@ jobs:
           path: test-results
   macos-build-and-test:
     # working_directory: ~/demo-react-native
-    macos:
-      xcode: 12.5.1
+    # macos:
+    #   xcode: 12.5.1
+    machine: true
+    resource_class: test-namespace/mac-runner1
       # xcode: 11.3.0
     # environment:
     #   FL_OUTPUT_DIR: output
