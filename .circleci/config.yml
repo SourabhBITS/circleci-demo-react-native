@@ -115,7 +115,7 @@ jobs:
   android-build-and-test:
     working_directory: ~/demo-react-native/android
     docker:
-      - image: 'hub.docker.prod.walmart.com/circleci/android:api-29-node'
+      - image: 'circleci/android:api-29-node'
     steps:
       - checkout:
           path: ~/demo-react-native
