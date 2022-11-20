@@ -47,7 +47,11 @@ jobs:
           path: test-results
 
   macos-build-and-test:
+    macos:
+      xcode: 14.0.0
     working_directory: ~/demo-react-native
+    # machine: true
+    # resource_class: ns_circle-poc-testing/MAC-LAB-MINI23
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
